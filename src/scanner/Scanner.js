@@ -1,17 +1,10 @@
 import Token from "./Token.js";
 import TokenType from "./TokenType.js";
 
-/**
- * 
- * @param {string} file_content 
- */
 const Scanner = function () {
   this.start = 0
   this.current = 0
 };
-
-
-
 
 /**
  * Return an array of token objects
@@ -19,12 +12,14 @@ const Scanner = function () {
  */
 Scanner.prototype.scanTokens = function (file_content) {
   const tokens = []
+
   const addToken = (type) => {
     const next_char = this.current + 1
     const lexeme = file_content.substring(this.start, next_char)
     this.start = next_char
     tokens.push(new Token(type, lexeme))
   }
+
   while (this.current < file_content.length) {
     const c = file_content.charAt(this.current)
     switch (c) {
@@ -39,6 +34,24 @@ Scanner.prototype.scanTokens = function (file_content) {
         break
       case ")":
         addToken(TokenType.RIGHT_BRACE)
+        break
+      case ",":
+        addToken(TokenType.COMMA)
+        break
+      case ".":
+        addToken(TokenType.DOT)
+        break
+      case "-":
+        addToken(TokenType.MINUS)
+        break
+      case "+":
+        addToken(TokenType.PLUS)
+        break
+      case "*":
+        addToken(TokenType.STAR)
+        break
+      case ";":
+        addToken(TokenType.SEMICOLON)
         break
       default:
         break;
