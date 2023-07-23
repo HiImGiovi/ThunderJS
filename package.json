@@ -1,0 +1,14 @@
+{
+  "name": "thunder",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "src/thunder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/thunder.js pippo.td aaa"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
