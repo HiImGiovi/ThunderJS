@@ -48,3 +48,5 @@ class TokenType {
   // eof
   static EOF = "EOF";
 }
+
+export default TokenType;

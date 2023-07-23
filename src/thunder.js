@@ -21,7 +21,9 @@ function run_file(file) {
 
 function run(content) {
   const tokens = scanner.scanTokens(content);
-  logger.log_info(tokens);
+  for (const token of tokens) {
+    logger.log_info(`Token: ${token.type} - ${token.lexeme}`)
+  }
 }
 
 async function run_prompt() {
