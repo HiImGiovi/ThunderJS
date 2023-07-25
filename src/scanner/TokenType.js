@@ -13,7 +13,7 @@ class TokenType {
   static STAR = "STAR";
 
   // one or two character tokens
-  static BANG = "STAR";
+  static BANG = "BANG";
   static BANG_EQUAL = "BANG_EQUAL";
   static EQUAL = "EQUAL";
   static EQUAL_EQUAL = "EQUAL_EQUAL";
