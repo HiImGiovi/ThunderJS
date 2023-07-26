@@ -5,6 +5,7 @@
   "description": "",
   "main": "src/thunder.js",
   "scripts": {
+    "watch": "nodemon src/thunder.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/thunder.js pippo.td aaa"
   },

@@ -13,7 +13,7 @@ if (process.argv.length > 3) {
 }
 
 function run_file(file) {
-  const file_content = readFileSync(file, { encoding: "ascii" });
+  const file_content = readFileSync(file, { encoding: "utf-8" });
   logger.log_info(`Running ${file}...`);
   logger.log_info(`File content:\n${file_content}`);
   run(file_content);
@@ -22,7 +22,7 @@ function run_file(file) {
 function run(content) {
   const tokens = scanner.scanTokens(content);
   for (const token of tokens) {
-    logger.log_info(`Token: ${token.type} - ${token.lexeme}`)
+    logger.log_info(`Token: ${token.type} - ${token.lexeme}`);
   }
 }
 

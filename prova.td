@@ -1,1 +1,5 @@
-hello from thunder
+(
+    //ciao
+"simone"
+'è fico "ciao"'
+)
